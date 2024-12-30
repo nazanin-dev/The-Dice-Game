@@ -29,7 +29,7 @@ diceBtn.addEventListener('click',function(){
     
     //2-display the dicePic
     dicePic.classList.remove('hidden');
-    dicePic.src = `/pic/dice-${dice}.png`;
+    dicePic.src = `/The-Dice-Game/pic/dice-${dice}.png`;
     //3-save in one variable
     scores[activePlayer] = scores[activePlayer] + dice;
     document.querySelector(`.score--${activePlayer}`).textContent = scores[activePlayer];
