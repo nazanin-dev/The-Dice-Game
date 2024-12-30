@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+    /* border: 1px solid yellow; */
+    font-family: "Bangers", serif;
+    
+}
+body{
+    /* background-color: rgba(243, 222, 222, 0.982); */
+    background: linear-gradient(to right, #333333 0%, #dd1818  150%);
+    position: relative;
+    
+}
+.container{
+    height: 80vh;
+    width: 80%;
+    border-radius: 11px;
+    border: 3px solid rgba(202, 32, 32, 0.399);
+    margin:10vh auto;
+    background-color: rgba(39, 38, 38, 0.56);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    >div{
+
+        &:nth-of-type(1){
+            width: 100%;
+            display: flex;
+            border-bottom: 3px solid rgba(202, 32, 32, 0.399);
+            height: 40%;
+            flex-wrap: wrap;
+        flex-direction: column;
+        position: relative;
+        }
+        &:nth-of-type(2){
+            width: 100%;
+            display: flex;
+            border-bottom: 3px solid rgba(202, 32, 32, 0.399);
+            height: 60%;
+            position: relative;
+            
+        }
+
+    }
+}
+.player{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    >*{
+        display: flex;
+        justify-content: center;
+    }
+    >p{
+        width: 100%;
+    }
+    >.player--0 , .player--1{
+    
+        font-family: "Bangers", serif;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        font-size: 50px;
+        color: white;
+        letter-spacing: 3px;
+        margin-top: 15px; 
+        -webkit-text-stroke: 1px rgb(142, 31, 31);
+    }
+    
+    >.score{
+        font-size: 90px;
+        margin-bottom: 150px;
+        color: white;
+        font-weight: 100;
+        display: flex;
+        align-items: center;
+        -webkit-text-stroke: 2px rgb(63, 60, 60);
+    }
+    
+}
+
+.text{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    
+  font-weight: 500;
+  font-style: normal;
+  font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+    2px 2px 0px red,
+    -2px 2px 0px red, 
+    2px -2px 0px red, 
+    -2px -2px 0px red;
+}
+.dice-stic{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center; 
+    cursor: pointer;
+    >img{
+       width: 70px;
+        &:hover{
+            animation: shake 1s ease-in-out, roll 1s ease-in-out;
+        }
+    }
+    
+}
+.question{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(56, 16, 16);
+    position: absolute;
+    margin: 5px;
+    top: 1%;
+    left: 0;
+    cursor: pointer;
+}
+.note{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bangers", serif;
+  font-weight: 250;
+  font-style: normal;
+  font-size: 30px;
+    color: rgba(255, 255, 255, 0.767);
+}
+.winer{
+height: 50px;
+margin-top: 5px;
+color: green;
+-webkit-text-stroke:2px black;
+}
+
+.dice-pic{
+    position: absolute;
+    left: 50%;
+    top: 5.5rem;
+    transform: translateX(-50%);
+    height: 10rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+    width: 100px;
+    object-fit: contain;     
+    
+}
+.new-game{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    cursor: pointer;
+    transform: translateX(-50%) ;
+    letter-spacing: 3px;
+    font-size: 20px;
+    padding: 9px;
+    border-radius: 30px;
+    transition: 1s;
+    transform-origin: center;
+    &:hover{
+        scale: 1.1;
+        background-color: #db1a1abb;
+        color: white;
+
+    }
+  
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 695px;
+    height: 500px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+    >h2{
+        
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        margin-top:20px;
+        font-family: "Varela Round", serif;
+    }
+    >p{
+        display: flex;
+        justify-content: start;
+        height: 80%;
+        margin-top: 20px;
+        text-align: start;
+        font-size: 20px;
+        width: 100%; 
+        line-height: 27px;
+        font-weight: 550;
+        font-family: "Varela Round", serif;
+        
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    font-size: 4rem;
+    color: #561818;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 5;
+  }
+.turn{
+    background-color: rgba(158, 66, 66, 0.403);
+}
+.hidden{
+    display: none;
+}
+.green {
+    background-color: rgba(121, 192, 121, 0.284);
+}
+
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); scale: 1; }
+    20%, 80% { transform: rotate(-20deg);  scale: 1.2;}
+    40%, 60% { transform: rotate(20deg); scale: 0.75; }
+}
